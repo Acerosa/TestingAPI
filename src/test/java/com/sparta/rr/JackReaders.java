@@ -13,7 +13,6 @@ import java.util.List;
 public class JackReaders {
     ObjectMapper objectMapper = new ObjectMapper();
 
-
     public RickAndMortyCharacterPOJO readRickAndMortyCharacterReader(String path){
         RickAndMortyCharacterPOJO rickAndMortyPOJO = new RickAndMortyCharacterPOJO();
         try {

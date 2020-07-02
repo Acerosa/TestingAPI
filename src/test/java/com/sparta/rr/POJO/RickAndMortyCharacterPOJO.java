@@ -8,8 +8,6 @@ import com.sparta.rr.RickAndMortyInterface;
 import java.util.List;
 
 public class RickAndMortyCharacterPOJO implements RickAndMortyInterface {
-
-
     private String Created;
 
     private List<String> Episode;
