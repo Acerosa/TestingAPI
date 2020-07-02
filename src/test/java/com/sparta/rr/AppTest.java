@@ -20,8 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
+public class AppTest {
     /**
      * Rigorous Test :-)
      */
@@ -42,10 +41,13 @@ public class AppTest
                 .request("GET", url)
                 .then()
                 .statusCode(200);
+
+        JSONReader jsonReader = new JSONReader();
     }
 
     @Test
-    void testRickAndMortyCharacterName(){
+    void testRickAndMortyCharacterName() {
         assertTrue(headersDTO.checkHeaders());
     }
+
 }

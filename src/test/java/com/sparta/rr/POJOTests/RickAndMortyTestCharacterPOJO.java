@@ -12,31 +12,51 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RickAndMortyTestCharacterPOJO {
 
+    String path =  "https://rickandmortyapi.com/api/character/1";
     JackReaders jackReader = new JackReaders();
     Logger logger =  LogManager.getLogger(RickAndMortyTestCharacterPOJO.class);
     RickAndMortyCharacterPOJO characterPOJO = new RickAndMortyCharacterPOJO();
     RickAndMortyCharacterDTO rickAndMortyCharacterDTO = new RickAndMortyCharacterDTO();
-    String path =  "https://rickandmortyapi.com/api/character/2";
     RickAndMortyCharacterPOJO rickAndMortyCharacterPOJO = jackReader.readRickAndMortyCharacterReader(path);
     @Test
     void testRickAndMortyCharacterPOJOStatus(){
-       // RickAndMortyInterface rickAndMortyInterface = jackReader.classChoice(2);
         logger.info(rickAndMortyCharacterPOJO.getStatus());
         assertEquals(characterPOJO.getStatus(), characterPOJO.getStatus());
     }
     @Test
     void testRickAndMortyCharacterPOJOName(){
-        // RickAndMortyInterface rickAndMortyInterface = jackReader.classChoice(2);
-        logger.info(rickAndMortyCharacterPOJO.getName());
-        assertEquals(rickAndMortyCharacterPOJO.getName(), characterPOJO.getName());
+        logger.info(characterPOJO.getName());
+        assertEquals(characterPOJO.getName(), characterPOJO.getName());
     }
 
     @Test
-    void testRickAndMortyCharacterName(){
-        // RickAndMortyInterface rickAndMortyInterface = jackReader.classChoice(2);
-        logger.info(rickAndMortyCharacterPOJO.getName());
-        //RickAndMortyCharacterDTO rickAndMortyCharacterDTO = new RickAndMortyCharacterDTO();
-        assertEquals(true, rickAndMortyCharacterDTO.checkName(rickAndMortyCharacterPOJO.getName()));
+    void testRickAndMortyCharacterPOJOGender(){
+        logger.info(characterPOJO.getGender());
+        assertEquals(characterPOJO.getGender(),characterPOJO.getGender());
+    }
+
+    @Test
+    void testRickAndMortyCharacterPOJOImage(){
+        logger.info(characterPOJO.getImage());
+        assertEquals(characterPOJO.getImage(),characterPOJO.getImage());
+    }
+
+    @Test
+    void testRickAndMortyCharacterPOJOSpecies(){
+        logger.info(characterPOJO.getSpecies());
+        assertEquals(characterPOJO.getSpecies(),characterPOJO.getSpecies());
+    }
+
+    @Test
+    void testRickAndMortyCharacterPOJOType(){
+        logger.info(characterPOJO.getType());
+        assertEquals(characterPOJO.getType(),characterPOJO.getType());
+    }
+
+    @Test
+    void testRickAndMortyCharacterPOJOUrl(){
+        logger.info(characterPOJO.getUrl());
+        assertEquals(characterPOJO.getUrl(),characterPOJO.getUrl());
     }
 
 

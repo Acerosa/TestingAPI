@@ -4,7 +4,13 @@ package com.sparta.rr.POJO;
 import com.sparta.rr.Location;
 import com.sparta.rr.Origin;
 import com.sparta.rr.RickAndMortyInterface;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
 
 public class RickAndMortyCharacterPOJO implements RickAndMortyInterface {
@@ -127,5 +133,6 @@ public class RickAndMortyCharacterPOJO implements RickAndMortyInterface {
     public void setUrl(String url) {
         Url = url;
     }
+
 
 }

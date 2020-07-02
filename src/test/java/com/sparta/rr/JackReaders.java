@@ -8,6 +8,9 @@ import com.sparta.rr.POJO.RickAndMortyPOJOEpisode;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class JackReaders {
@@ -16,7 +19,7 @@ public class JackReaders {
     public RickAndMortyCharacterPOJO readRickAndMortyCharacterReader(String path){
         RickAndMortyCharacterPOJO rickAndMortyPOJO = new RickAndMortyCharacterPOJO();
         try {
-            rickAndMortyPOJO = objectMapper.readValue(new URL(path), RickAndMortyCharacterPOJO.class);
+            rickAndMortyPOJO = objectMapper.readValue(path, RickAndMortyCharacterPOJO.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -41,5 +44,7 @@ public class JackReaders {
         }
         return rickAndMortyPOJO;
     }
+
+
 }
 
