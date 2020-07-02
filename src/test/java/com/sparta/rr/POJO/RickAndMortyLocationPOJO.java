@@ -1,10 +1,12 @@
 
-package com.sparta.rr;
+package com.sparta.rr.POJO;
+
+import com.sparta.rr.RickAndMortyInterface;
 
 import java.util.List;
 
 
-public class RickAndMortyLocationPOJO {
+public class RickAndMortyLocationPOJO implements RickAndMortyInterface {
 
     private String Created;
 

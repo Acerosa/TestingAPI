@@ -1,26 +1,26 @@
 
 package com.sparta.rr;
 
-public class Location {
+public class Location implements RickAndMortyInterface{
 
-    private String mName;
+    private String Name;
 
-    private String mUrl;
+    private String Url;
 
     public String getName() {
-        return mName;
+        return Name;
     }
 
     public void setName(String name) {
-        mName = name;
+        Name = name;
     }
 
     public String getUrl() {
-        return mUrl;
+        return Url;
     }
 
     public void setUrl(String url) {
-        mUrl = url;
+        Url = url;
     }
 
 }

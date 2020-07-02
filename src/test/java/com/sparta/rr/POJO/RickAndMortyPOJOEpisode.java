@@ -1,9 +1,11 @@
 
-package com.sparta.rr;
+package com.sparta.rr.POJO;
+
+import com.sparta.rr.RickAndMortyInterface;
 
 import java.util.List;
 
-public class RickAndMortyPOJOEpisode {
+public class RickAndMortyPOJOEpisode implements RickAndMortyInterface {
 
     private String AirDate;
 

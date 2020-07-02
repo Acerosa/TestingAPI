@@ -1,9 +1,13 @@
 
-package com.sparta.rr;
+package com.sparta.rr.POJO;
+
+import com.sparta.rr.Location;
+import com.sparta.rr.Origin;
+import com.sparta.rr.RickAndMortyInterface;
 
 import java.util.List;
 
-public class RickAndMortyCharacterPOJO {
+public class RickAndMortyCharacterPOJO implements RickAndMortyInterface {
 
 
     private String Created;
@@ -16,11 +20,11 @@ public class RickAndMortyCharacterPOJO {
 
     private String Image;
 
-    private Location Location;
+    private com.sparta.rr.Location Location;
 
     private String Name;
 
-    private Origin Origin;
+    private com.sparta.rr.Origin Origin;
 
     private String Species;
 

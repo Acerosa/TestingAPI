@@ -1,7 +1,7 @@
 
 package com.sparta.rr;
 
-public class Origin {
+public class Origin  implements RickAndMortyInterface{
 
     private String Name;
 
