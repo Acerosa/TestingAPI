@@ -6,6 +6,7 @@ This is easy to perform data validation tests using JUnit. Testing the structure
 
 #Dependencies needed:
 -Maven
+
 -Junit​
 
 -Jackson​
