@@ -2,7 +2,7 @@
 And api testing framework
 
 This framework was design to test the Rick and Morty API it contains POJOs to retrieve and store the data in java objects.
-Making it easy to perform data validation tests using JUnit. Testing the structure of the JSON object response is also easy as there are ready to use methods to use in the tests.
+Making it easy to perform data validation tests using JUnit. Testing the structure of the JSON object response is also easy as there are ready methods to use in the tests.
 
 # Dependencies needed:
 
