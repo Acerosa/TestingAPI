@@ -17,11 +17,9 @@ public class TestCharacterDTO {
     DataValidation dataValidation = new DataValidation();
     RickAndMortyCharacterPOJO characterPOJO = jackReader.readRickAndMortyCharacterReader(path);
 
-//    @Test
-//    void testRickAndMortyCharacterDTOcheckName(){
-//        logger.info(characterPOJO.getName());
-//        assertTrue((dataValidation.checkForString((characterPOJO.getName()))));
-//    }
-
-
+    @Test
+    void testRickAndMortyCharacterDTOcheckName(){
+        logger.info(characterPOJO.getName());
+        assertTrue((dataValidation.checkForString((characterPOJO.getName()))));
+    }
 }
