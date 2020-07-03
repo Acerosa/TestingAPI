@@ -2,18 +2,14 @@ package com.sparta.rr;
 
 
 import com.sparta.rr.DTOs.HeadersDTO;
-import com.sparta.rr.DTOs.RickAndMortyCharacterDTO;
+import com.sparta.rr.DTOs.DataValidation;
 import com.sparta.rr.POJO.RickAndMortyCharacterPOJO;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -31,7 +27,8 @@ public class AppTest {
 
     JackReaders jackReader = new JackReaders();
     RickAndMortyCharacterPOJO rickAndMortyPOJO = jackReader.readRickAndMortyCharacterReader(url);
-    RickAndMortyCharacterDTO rickAndMortyCharacterDTO = new RickAndMortyCharacterDTO();
+    DataValidation dataValidation = new DataValidation();
+
 
 
     @Test
@@ -41,13 +38,20 @@ public class AppTest {
                 .request("GET", url)
                 .then()
                 .statusCode(200);
-
-        JSONReader jsonReader = new JSONReader();
     }
 
     @Test
-    void testRickAndMortyCharacterName() {
-        assertTrue(headersDTO.checkHeaders());
+    void testcheckHeaders() {
+        assertTrue( headersDTO.checkHeaders());
     }
 
+    @Test
+    void testreturnHeadersCount() {
+        assertEquals(headersDTO.getUrlConnection().getHeaderFields().size(), headersDTO.returnHeadersCount());
+    }
+
+//    @Test
+//    void testreturnHeadersDate() {
+//        assertTrue( headersDTO.checkRegex());
+//    }
 }

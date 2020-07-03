@@ -19,7 +19,7 @@ public class JackReaders {
     public RickAndMortyCharacterPOJO readRickAndMortyCharacterReader(String path){
         RickAndMortyCharacterPOJO rickAndMortyPOJO = new RickAndMortyCharacterPOJO();
         try {
-            rickAndMortyPOJO = objectMapper.readValue(path, RickAndMortyCharacterPOJO.class);
+            rickAndMortyPOJO = objectMapper.readValue(new URL(path), RickAndMortyCharacterPOJO.class);
         } catch (IOException e) {
             e.printStackTrace();
         }

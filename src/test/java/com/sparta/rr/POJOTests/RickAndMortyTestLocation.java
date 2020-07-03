@@ -1,8 +1,6 @@
 package com.sparta.rr.POJOTests;
 
-import com.sparta.rr.DTOs.RickAndMortyCharacterDTO;
 import com.sparta.rr.JackReaders;
-import com.sparta.rr.POJO.RickAndMortyCharacterPOJO;
 import com.sparta.rr.POJO.RickAndMortyLocationPOJO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,11 +8,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RickAndMortyTestLocationPOJO {
+public class RickAndMortyTestLocation {
 
         String path =  "https://rickandmortyapi.com/api/location/3";
         JackReaders jackReader = new JackReaders();
-        Logger logger =  LogManager.getLogger(com.sparta.rr.POJOTests.RickAndMortyTestCharacterPOJO.class);
+        Logger logger =  LogManager.getLogger(RickAndMortyTestCharacter.class);
         RickAndMortyLocationPOJO rickAndMortyLocationPOJO = jackReader.readRickAndMortyLocationReader(path);
         @Test
         void testRickAndMortyLocationPOJOCreated(){

@@ -1,6 +1,6 @@
 package com.sparta.rr.POJOTests;
 
-import com.sparta.rr.DTOs.RickAndMortyCharacterDTO;
+import com.sparta.rr.DTOs.DataValidation;
 import com.sparta.rr.JackReaders;
 import com.sparta.rr.POJO.RickAndMortyCharacterPOJO;
 import org.apache.logging.log4j.LogManager;
@@ -10,17 +10,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class RickAndMortyTestCharacterPOJO {
+public class RickAndMortyTestCharacter {
 
     String path =  "https://rickandmortyapi.com/api/character/1";
     JackReaders jackReader = new JackReaders();
-    Logger logger =  LogManager.getLogger(RickAndMortyTestCharacterPOJO.class);
-    RickAndMortyCharacterPOJO characterPOJO = new RickAndMortyCharacterPOJO();
-    RickAndMortyCharacterDTO rickAndMortyCharacterDTO = new RickAndMortyCharacterDTO();
-    RickAndMortyCharacterPOJO rickAndMortyCharacterPOJO = jackReader.readRickAndMortyCharacterReader(path);
+    Logger logger =  LogManager.getLogger(RickAndMortyTestCharacter.class);
+   // RickAndMortyCharacterPOJO characterPOJO = new RickAndMortyCharacterPOJO();
+    DataValidation dataValidation = new DataValidation();
+    RickAndMortyCharacterPOJO characterPOJO = jackReader.readRickAndMortyCharacterReader(path);
     @Test
     void testRickAndMortyCharacterPOJOStatus(){
-        logger.info(rickAndMortyCharacterPOJO.getStatus());
+        logger.info(characterPOJO.getStatus());
         assertEquals(characterPOJO.getStatus(), characterPOJO.getStatus());
     }
     @Test
