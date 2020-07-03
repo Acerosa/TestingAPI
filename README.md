@@ -14,5 +14,7 @@ RestAssured​
 
 JSONsimple​
 
-The project is devided in 4 sections/folders POJO folder contains the POJO class uses to make the objects to hold the data from the HTTP request.
-POJOTest is has classes that use getters from the POJOs to check the valitidy of the data from the requst.  
+To make use of this framework:
+If is to test the contests of the from the request an instanciation of the POJO representing the request and using the getters to check if the values match.
+To test if the data type sent from the request are correct use the Data validation clss and call the checkForString method to check for a string this method will return true if the string contains a valeu and match the regular expression to check for a string.
+The method checkUrl does the same thing but for a url 

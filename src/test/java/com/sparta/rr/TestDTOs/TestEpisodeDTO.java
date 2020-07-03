@@ -18,27 +18,27 @@ public class TestEpisodeDTO {
     DataValidation dataValidation = new DataValidation();
     RickAndMortyPOJOEpisode episodePOJO = jackReader.readRickAndMortyEpisodeReader(path);
 
-    @Test
-    void testRickAndMortyCharacterDTOcheckUrl() {
-        logger.info(episodePOJO.getUrl());
-        assertTrue((dataValidation.checkUrl(episodePOJO.getUrl())));
-    }
-
-    @Test
-    void testRickAndMortyCharacterDTOcheckName() {
-        logger.info(episodePOJO.getName());
-        assertTrue((dataValidation.checkForString((episodePOJO.getName()))));
-    }
-
-    @Test
-    void testRickAndMortyCharacterDTOcheckEpisode() {
-        logger.info(episodePOJO.getEpisode());
-        assertTrue((dataValidation.checkForString(episodePOJO.getEpisode())));
-    }
-
-    @Test
-    void testRickAndMortyCharacterDTOcheckAirDate() {
-        logger.info(episodePOJO.getAirDate());
-        assertTrue((dataValidation.checkForString(episodePOJO.getAirDate())));
-    }
+//    @Test
+//    void testRickAndMortyCharacterDTOcheckUrl() {
+//        logger.info(episodePOJO.getUrl());
+//        assertTrue((dataValidation.checkUrl(episodePOJO.getUrl())));
+//    }
+//
+//    @Test
+//    void testRickAndMortyCharacterDTOcheckName() {
+//        logger.info(episodePOJO.getName());
+//        assertTrue((dataValidation.checkForString((episodePOJO.getName()))));
+//    }
+//
+//    @Test
+//    void testRickAndMortyCharacterDTOcheckEpisode() {
+//        logger.info(episodePOJO.getEpisode());
+//        assertTrue((dataValidation.checkForString(episodePOJO.getEpisode())));
+//    }
+//
+//    @Test
+//    void testRickAndMortyCharacterDTOcheckAirDate() {
+//        logger.info(episodePOJO.getAirDate());
+//        assertTrue((dataValidation.checkForString(episodePOJO.getAirDate())));
+//    }
 }

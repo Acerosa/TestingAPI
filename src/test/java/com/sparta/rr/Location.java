@@ -1,7 +1,7 @@
 
 package com.sparta.rr;
 
-public class Location implements RickAndMortyInterface{
+public class Location {
 
     private String Name;
 

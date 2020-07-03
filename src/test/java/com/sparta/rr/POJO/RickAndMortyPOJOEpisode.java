@@ -1,11 +1,9 @@
 
 package com.sparta.rr.POJO;
 
-import com.sparta.rr.RickAndMortyInterface;
-
 import java.util.List;
 
-public class RickAndMortyPOJOEpisode implements RickAndMortyInterface {
+public class RickAndMortyPOJOEpisode {
 
     private String AirDate;
 
@@ -15,7 +13,7 @@ public class RickAndMortyPOJOEpisode implements RickAndMortyInterface {
 
     private String Episode;
 
-    private Long Id;
+    private int Id;
 
     private String Name;
 
@@ -53,11 +51,11 @@ public class RickAndMortyPOJOEpisode implements RickAndMortyInterface {
         Episode = episode;
     }
 
-    public Long getId() {
+    public int getId() {
         return Id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         Id = id;
     }
 
@@ -77,4 +75,7 @@ public class RickAndMortyPOJOEpisode implements RickAndMortyInterface {
         Url = url;
     }
 
+    public boolean charactersNotEmpty(){
+        return !getCharacters().isEmpty();
+    }
 }

@@ -17,21 +17,15 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Unit test for simple App.
  */
 public class AppTest {
-    /**
-     * Rigorous Test :-)
-     */
-    //HeadersDTO headersDTO = new HeadersDTO();
+
+    HeadersDTO headersDTO = new HeadersDTO();
     String url = "https://rickandmortyapi.com/api/character/2";
     URL theUrl;
     URLConnection urlConnection;
 
-
-
     JackReaders jackReader = new JackReaders();
     RickAndMortyCharacterPOJO rickAndMortyPOJO = jackReader.readRickAndMortyCharacterReader(url);
     DataValidation dataValidation = new DataValidation();
-
-
 
     @Test
     public void testRickAndMortyAPI() {
@@ -40,15 +34,22 @@ public class AppTest {
                 .request("GET", url)
                 .then()
                 .statusCode(200);
+
+        headersDTO.creatConnectio();
     }
 
-//    @Test
-//    void testcheckHeaders() {
-//        assertTrue( headersDTO.checkHeaders());
-//    }
+  @Test
+   void testcheckHeaders() {
+       assertTrue( headersDTO.checkHeaders());
+   }
 
-//    @Test
-//    void testreturnHeadersCount() {
-//        assertEquals(headersDTO.getUrlConnection().getHeaderFields().size(), headersDTO.returnHeadersCount());
-//    }
+   @Test
+   void testreturnHeadersCount() {
+        assertEquals(headersDTO.getUrlConnection().getHeaderFields().size(), headersDTO.returnHeadersCount());
+   }
+    @Test
+    void testreturnHeadersKeppeAlive() {
+        assertEquals("keep-alive",headersDTO.getUrlConnection().getHeaderField("keep-alive"));
+    }
+
 }

@@ -54,8 +54,6 @@ public class RickAndMortyTestEpisode {
             logger.info(rickAndMortyPOJOEpisode.getUrl());
             assertEquals(rickAndMortyPOJOEpisode.getUrl(),rickAndMortyPOJOEpisode.getUrl());
         }
-
-
 }
 
 

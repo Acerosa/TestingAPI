@@ -1,18 +1,16 @@
 
 package com.sparta.rr.POJO;
 
-import com.sparta.rr.RickAndMortyInterface;
-
 import java.util.List;
 
 
-public class RickAndMortyLocationPOJO implements RickAndMortyInterface {
+public class RickAndMortyLocationPOJO {
 
     private String Created;
 
     private String Dimension;
 
-    private Long Id;
+    private int Id;
 
     private String Name;
 
@@ -38,11 +36,11 @@ public class RickAndMortyLocationPOJO implements RickAndMortyInterface {
         Dimension = dimension;
     }
 
-    public Long getId() {
+    public int getId() {
         return Id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         Id = id;
     }
 

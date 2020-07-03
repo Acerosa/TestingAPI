@@ -16,34 +16,35 @@ public class TestCharacterDTO {
     Logger logger =  LogManager.getLogger(TestCharacterDTO.class);
     DataValidation dataValidation = new DataValidation();
     RickAndMortyCharacterPOJO characterPOJO = jackReader.readRickAndMortyCharacterReader(path);
-    @Test
-    void testRickAndMortyCharacterDTOcheckUrl(){
-        logger.info(characterPOJO.getUrl());
-        assertTrue((dataValidation.checkUrl(characterPOJO.getUrl())));
- }
 
+//    @Test
+//    void testRickAndMortyCharacterDTOcheckUrl(){
+//        logger.info(characterPOJO.getUrl());
+//        assertTrue((dataValidation.checkUrl(characterPOJO.getUrl())));
+// }
+//
     @Test
     void testRickAndMortyCharacterDTOcheckName(){
         logger.info(characterPOJO.getName());
         assertTrue((dataValidation.checkForString((characterPOJO.getName()))));
     }
-
-    @Test
-    void testRickAndMortyCharacterDTOcheckGender(){
-        logger.info(characterPOJO.getGender());
-        assertTrue((dataValidation.checkForString(characterPOJO.getGender())));
-    }
-
-    @Test
-    void testRickAndMortyCharacterDTOcheckCreated(){
-        logger.info(characterPOJO.getCreated());
-        assertTrue((dataValidation.checkForString(characterPOJO.getCreated())));
-    }
-
-    @Test
-    void testRickAndMortyCharacterDTOcheckSpecies(){
-        logger.info(characterPOJO.getSpecies());
-        assertTrue((dataValidation.checkForString(characterPOJO.getSpecies())));
-    }
+//
+//    @Test
+//    void testRickAndMortyCharacterDTOcheckGender(){
+//        logger.info(characterPOJO.getGender());
+//        assertTrue((dataValidation.checkForString(characterPOJO.getGender())));
+//    }
+//
+//    @Test
+//    void testRickAndMortyCharacterDTOcheckCreated(){
+//        logger.info(characterPOJO.getCreated());
+//        assertTrue((dataValidation.checkForString(characterPOJO.getCreated())));
+//    }
+//
+//    @Test
+//    void testRickAndMortyCharacterDTOcheckSpecies(){
+//        logger.info(characterPOJO.getSpecies());
+//        assertTrue((dataValidation.checkForString(characterPOJO.getSpecies())));
+//    }
 
 }

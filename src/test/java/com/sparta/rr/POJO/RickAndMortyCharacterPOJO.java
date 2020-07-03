@@ -3,24 +3,17 @@ package com.sparta.rr.POJO;
 
 import com.sparta.rr.Location;
 import com.sparta.rr.Origin;
-import com.sparta.rr.RickAndMortyInterface;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.List;
 
-public class RickAndMortyCharacterPOJO implements RickAndMortyInterface {
+public class RickAndMortyCharacterPOJO {
     private String Created;
 
     private List<String> Episode;
 
     private String Gender;
 
-    private Long Id;
+    private int Id;
 
     private String Image;
 
@@ -62,11 +55,11 @@ public class RickAndMortyCharacterPOJO implements RickAndMortyInterface {
         Gender = gender;
     }
 
-    public Long getId() {
+    public int getId() {
         return Id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         Id = id;
     }
 
@@ -135,4 +128,10 @@ public class RickAndMortyCharacterPOJO implements RickAndMortyInterface {
     }
 
 
+    public String checkTheName(){
+        if (!getName().isEmpty()){
+            return  getName();
+        }
+       return null;
+    }
 }
