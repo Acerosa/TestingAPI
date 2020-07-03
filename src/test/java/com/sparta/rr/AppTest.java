@@ -20,12 +20,7 @@ public class AppTest {
 
     HeadersDTO headersDTO = new HeadersDTO();
     String url = "https://rickandmortyapi.com/api/character/2";
-    URL theUrl;
-    URLConnection urlConnection;
-
     JackReaders jackReader = new JackReaders();
-    RickAndMortyCharacterPOJO rickAndMortyPOJO = jackReader.readRickAndMortyCharacterReader(url);
-    DataValidation dataValidation = new DataValidation();
 
     @Test
     public void testRickAndMortyAPI() {
@@ -35,7 +30,6 @@ public class AppTest {
                 .then()
                 .statusCode(200);
 
-        headersDTO.creatConnectio();
     }
 
   @Test
@@ -47,9 +41,5 @@ public class AppTest {
    void testreturnHeadersCount() {
         assertEquals(headersDTO.getUrlConnection().getHeaderFields().size(), headersDTO.returnHeadersCount());
    }
-    @Test
-    void testreturnHeadersKeppeAlive() {
-        assertEquals("keep-alive",headersDTO.getUrlConnection().getHeaderField("keep-alive"));
-    }
 
 }

@@ -15,7 +15,7 @@ public class HeadersDTO {
    public Collection<List<String>> values;
     Object[] arrayHeaders;
 
-    public void creatConnectio(){
+
         {
         try {
             theUrl = new URL(url);
@@ -27,7 +27,7 @@ public class HeadersDTO {
             e.printStackTrace();
         }
         }
-    }
+
     public URLConnection getUrlConnection() {
         return urlConnection;
     }
@@ -36,16 +36,9 @@ public class HeadersDTO {
         return urlConnection.getHeaderFields().size();
         }
     public boolean checkHeaders(){
-            return values.containsAll(Arrays.asList(arrayHeaders));
+            return !values.isEmpty() && values.containsAll(Arrays.asList(arrayHeaders));
         }
 
-    public String testKeepAlive(){
-      return getUrlConnection().getHeaderField("keep-alive");
-    }
-
-    public String testKeepMISS(){
-        return getUrlConnection().getHeaderField("MISS");
-    }
 }
 
 
