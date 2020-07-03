@@ -5,6 +5,7 @@ This framework was design to test the Rick and Morty API it contains POJOs to re
 This is easy to perform data validation tests using JUnit. Testing the structure of the JSON object response is also easy as there are ready to use methods to use in the tests.
 
 #Dependencies needed:
+
 -Maven
 
 -Junit​
