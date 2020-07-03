@@ -13,21 +13,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RickAndMortyTestCharacter {
 
-    String path =  "https://rickandmortyapi.com/api/character/1";
-    JackReaders jackReader = new JackReaders();
     Logger logger =  LogManager.getLogger(RickAndMortyTestCharacter.class);
-    RickAndMortyCharacterPOJO characterPOJO = jackReader.readRickAndMortyCharacterReader(path);
+
+    CharacterDTO characterDTO = new CharacterDTO();
 
     @Test
     void testRickAndMortyCharacterPOJOStatus(){
-        logger.info(characterPOJO.getStatus());
-        assertEquals("HTTP/1.1 200 OK", characterPOJO.getStatus());
+        logger.info(characterDTO.getCharacterPOJO().getStatus());
+        assertEquals("Alive", characterDTO.checkTheValeu(characterDTO.getCharacterPOJO().getStatus()));
     }
 
     @Test
     void testRickAndMortyCharacterPOJOName(){
-        logger.info(characterPOJO.getName());
-        assertEquals(characterPOJO.getName(), characterPOJO.checkTheName());
+        logger.info(characterDTO.getCharacterPOJO().getName());
+        assertEquals("Rick Sanchez", characterDTO.checkTheValeu(characterDTO.getCharacterPOJO().getName()));
     }
 
 }

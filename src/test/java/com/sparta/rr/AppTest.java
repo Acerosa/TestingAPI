@@ -29,7 +29,6 @@ public class AppTest {
                 .request("GET", url)
                 .then()
                 .statusCode(200);
-
     }
 
   @Test
@@ -39,7 +38,7 @@ public class AppTest {
 
    @Test
    void testreturnHeadersCount() {
-        assertEquals(headersDTO.getUrlConnection().getHeaderFields().size(), headersDTO.returnHeadersCount());
+        assertEquals(14, headersDTO.returnHeadersCount());
    }
 
 }

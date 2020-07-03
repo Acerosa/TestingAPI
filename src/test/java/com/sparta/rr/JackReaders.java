@@ -1,17 +1,11 @@
 package com.sparta.rr;
-
-import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sparta.rr.POJO.RickAndMortyCharacterPOJO;
 import com.sparta.rr.POJO.RickAndMortyLocationPOJO;
 import com.sparta.rr.POJO.RickAndMortyPOJOEpisode;
-
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+
 
 public class JackReaders {
     ObjectMapper objectMapper = new ObjectMapper();
