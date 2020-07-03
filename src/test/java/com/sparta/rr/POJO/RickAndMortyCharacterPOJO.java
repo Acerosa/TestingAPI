@@ -1,9 +1,6 @@
 
 package com.sparta.rr.POJO;
 
-import com.sparta.rr.Location;
-import com.sparta.rr.Origin;
-
 import java.util.List;
 
 public class RickAndMortyCharacterPOJO {
@@ -17,11 +14,7 @@ public class RickAndMortyCharacterPOJO {
 
     private String Image;
 
-    private com.sparta.rr.Location Location;
-
     private String Name;
-
-    private com.sparta.rr.Origin Origin;
 
     private String Species;
 
@@ -71,28 +64,12 @@ public class RickAndMortyCharacterPOJO {
         Image = image;
     }
 
-    public Location getLocation() {
-        return Location;
-    }
-
-    public void setLocation(Location location) {
-        Location = location;
-    }
-
     public String getName() {
         return Name;
     }
 
     public void setName(String name) {
         Name = name;
-    }
-
-    public Origin getOrigin() {
-        return Origin;
-    }
-
-    public void setOrigin(Origin origin) {
-        Origin = origin;
     }
 
     public String getSpecies() {
@@ -127,11 +104,4 @@ public class RickAndMortyCharacterPOJO {
         Url = url;
     }
 
-
-    public String checkTheName(){
-        if (!getName().isEmpty()){
-            return  getName();
-        }
-       return null;
-    }
 }

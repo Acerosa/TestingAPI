@@ -12,10 +12,10 @@ public class HeadersDTO {
     URL theUrl;
     URLConnection urlConnection;
 
+
+
    public Collection<List<String>> values;
     Object[] arrayHeaders;
-
-
         {
         try {
             theUrl = new URL(url);

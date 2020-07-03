@@ -20,8 +20,6 @@ public class AppTest {
 
     HeadersDTO headersDTO = new HeadersDTO();
     String url = "https://rickandmortyapi.com/api/character/2";
-    JackReaders jackReader = new JackReaders();
-
     @Test
     public void testRickAndMortyAPI() {
         given()
